@@ -1,10 +1,8 @@
 # 🔮 Customer Churn Prediction ML Model
 
 <div align="center">
-  
   <img src="https://img.shields.io/badge/Python-3.11+-blue.svg" alt="Python Version">
   <img src="https://img.shields.io/badge/Machine%20Learning-Random%20Forest-green.svg" alt="ML Model">
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
   <img src="https://img.shields.io/badge/Status-Complete-brightgreen.svg" alt="Status">
 </div>
 
@@ -42,9 +40,21 @@ predictions = model.predict(new_customer_data)
 
 | Metric | Score |
 |--------|-------|
-| **Accuracy** | 85%+ |
-| **Cross-validation** | 5-fold CV implemented |
-| **Overfitting Check** | Train vs Test accuracy monitored |
+| **Test Accuracy** | 94.0% |
+| **Train Accuracy** | 93.5% |
+| **Cross-validation (5-fold)** | 92.9% ± 1.4% |
+| **Precision (Macro Avg)** | 95% |
+| **Recall (Macro Avg)** | 90% |
+| **F1-Score (Macro Avg)** | 92% |
+
+### Class-wise Performance
+| Churn Risk | Precision | Recall | F1-Score | Support |
+|------------|-----------|---------|----------|---------|
+| **Low (0)** | 90% | 99% | 94% | 251 |
+| **Medium (1)** | 99% | 100% | 99% | 170 |
+| **High (2)** | 97% | 70% | 81% | 96 |
+
+✅ **No Overfitting Detected**: Train accuracy (93.5%) vs Test accuracy (94.0%)
 
 ## 🔧 Technical Architecture
 
@@ -66,11 +76,13 @@ Raw Data → Missing Value Imputation → One-Hot Encoding → Feature Scaling �
 
 ## 📁 Project Structure
 
+```
 ├── churn.csv                    # Dataset
 ├── Classification_RF_Model.ipynb # Main notebook
 ├── churn_prediction.py          # Python script version
 ├── requirements.txt             # Dependencies
 └── README.md                   # This file
+```
 
 ## 🎨 Visualizations
 
@@ -101,9 +113,16 @@ The project includes:
 ## 📊 Sample Output
 
 ```
-Accuracy of Random Forest Classifier: 0.8547
-Cross-validation scores: [0.84, 0.86, 0.85, 0.87, 0.83]
-Mean CV score: 0.85
+Accuracy of Random Forest Classifier: 0.9400
+
+Classification Report:
+                 precision    recall  f1-score   support
+Low Risk (0)         0.90      0.99      0.94       251
+Medium Risk (1)      0.99      1.00      0.99       170  
+High Risk (2)        0.97      0.70      0.81        96
+
+Cross-validation scores: [0.945, 0.910, 0.926, 0.939, 0.926]
+Mean CV score: 0.929
 ```
 
 ## 🤝 Contributing
