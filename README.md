@@ -125,14 +125,6 @@ Cross-validation scores: [0.945, 0.910, 0.926, 0.939, 0.926]
 Mean CV score: 0.929
 ```
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/improvement`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/improvement`)
-5. Create a Pull Request
-
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
