@@ -66,12 +66,11 @@ Raw Data → Missing Value Imputation → One-Hot Encoding → Feature Scaling �
 
 ## 📁 Project Structure
 
-```
 ├── churn.csv                    # Dataset
-├── random_forest_model.pkl      # Trained model
 ├── Classification_RF_Model.ipynb # Main notebook
+├── churn_prediction.py          # Python script version
+├── requirements.txt             # Dependencies
 └── README.md                   # This file
-```
 
 ## 🎨 Visualizations
 
